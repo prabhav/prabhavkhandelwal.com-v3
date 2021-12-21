@@ -1,0 +1,216 @@
+$font-body: "acumin-pro", Roboto Mono, sans-serif, monospace, sans-serif;
+$font-monospace: Roboto Mono, monospace;
+
+// Variables
+
+$blue: #00adef;
+$orange: #fa5c5c;
+$yellow: #f1c40f;
+$red: #f22613;
+$green: #bada55;
+$yellow-fast: #fee900;
+$gray: rgb(31, 31, 31);
+
+$facebook-blue: #3b5998;
+$twitter-blue: #55acee;
+
+$small-width: 600px;
+$medium-width: 768px;
+$large-width: 1024px;
+
+@mixin small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+// Animations
+
+@keyframes spin {
+	0% { transform: rotate(0); }
+	100% { transform: rotate(359deg); }
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes rotate-bg {
+  0% { background-position-x: 0; }
+  50% { background-position-x: 100%; }
+  100% { background-position-x: 200%; }
+}
+
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0.5; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+%full-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+    // background-attachment: fixed;
+}
+
+%word-break {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+::selection {
+	background: $red;
+	color: white;
+}
+
+::-moz-selection {
+	background: $red;
+	color: white;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+
+header, section, footer {
+	width: 100%;
+	overflow: auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+* {
+
+    box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+b { font-weight: normal; }
+
+i { font-style: normal; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+u { text-decoration: underline; }
+
+img { max-width: 100%; }
+
+small {
+    font-size: 90%;
+}
+
+header, footer, section {
+	overflow: auto;
+	width: 100%;
+}
+
+// Form Reset
+
+input[placeholder],
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="submit"],
+	textarea,
+	select,
+	option {
+	  color: white;
+	  padding: 1rem;
+	  border-radius: 0;
+	  background: rgba(white, 0);
+	  outline-offset: 0;
+	  max-width: 100%;
+	  font: {
+	  	family: $font-body;
+	  }
+}
+
+input[type="submit"] {
+	font: {
+		family: $font-body;
+		weight: bold;
+	}
+	text-transform: uppercase;
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	// background: white;
+	// color: black;
+}

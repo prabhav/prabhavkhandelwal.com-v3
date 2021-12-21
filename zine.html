@@ -1,0 +1,225 @@
+---
+title: Home
+---
+
+<section class="section section--dual">
+	<section class="section section--dual__alpha">
+		<header class="section--dual__masthead">
+			<h1>
+				I make websites and stuff.
+			</h1>
+		</header>
+
+		<article class="project">
+			<h1 class="project__title">The &rsquo;Zine</h1>
+
+			<!-- <h3 class="project__url">
+				<a href="http://thezine.biz">thezine.biz</a>
+			</h3> -->
+
+			<p class="project__tldr">The ‘Zine is an online magazine started and run by Meghna Gulati, that seeks to provide a platform for the stories and thoughts of the Indian youth. I was responsible with designing and developing the <a href="http://zine-old.prabhav.xyz">initial version of the site</a>, back in 2013. Two years after the initial launch, I was contacted again for a redesign. My job was mainly to do 3 things: <em>revamping the whole content structure of the magazine</em>, <em>crafting a new visual aesthetic</em>, and <em>coding the whole site with a CMS-backed infrastructure</em>. So yeah, I was pretty much turning the whole magazine over on its head.</p>
+
+			<hr>
+
+			<h1>Problems with earlier design:</h1>
+			<h2>1. Content Structure </h2>
+			<p>a.k.a. <em>Column-Columnists? Articles-Writers?</em></p>
+
+			<p>When it was launched, the site was made to follow a traditional magazine content format based on columns - a writer was given a particular topic to write on, and they publish subsequent issues of the same in a quarterly fashion.</p>
+
+			<blockquote>
+			<p>For instance, one of the columnists, Rahat Chawla, maintained a column on food reviews. So every quarter, he would review a restaurant and write about it. Screenshots from issues 3, 4, and 5.</p>
+
+			</blockquote>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/1.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/2.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/3.png>
+				<figcaption>
+					Rahat Chawla and his series about reviews of restaurants.
+				</figcaption>
+			</figure>
+
+			<h3>Main problems with this model:</h3>
+
+			<ul>
+				<li>Writers complained of being bored—and sometimes out of content for a scheduled issue release </li>
+				<li>As a result, readers reported that writers sometimes went out of their content zone and sometimes the content overlapped with other columns.</li>
+			</ul>
+
+			<h2>2. Publication Schedule & Content Management System</h2>
+
+			<p>The site followed a quarterly publication schedule, like a magazine has issues. So, every 3 months we received all the articles and coded it out. What made it even harder was the fact that since the first version was  built in a rush, the infrastructure wasn’t based on a Content Management System. </p>
+
+			<ul>
+				<li>Since the site was updated only every 3 months, the time between the issue releases was a very heavy lull for the traffic. Traffic on the site sharply dropped after almost 2-3 weeks of the release, and users even reduced engagement on the social media profiles—primarily because of the lack of fresh content.</li>
+				<li>The lack of a content management system of course made the issue update season ever harder. The backend was based on Liquid-based template system that ran on <a href="http://mixture.io">Mixture</a>—which ran without a client-accessible editor.</li>
+			</ul>
+
+			<h2>3. Layout and Aesthetics</h2>
+			<em>It just doesn’t look and feel like an online magazine.</em>
+
+			<ul><li>The look of the old site made it look more like a marketing site, and not a publication—for which the site should be as content-centric as possible.
+			</li></ul>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/4.png>
+				<figcaption>The old version of the site.</figcaption>
+			</figure>
+
+			<ul><li>Navigating through the content wasn’t convenient for the reader/user either, as in place of the title/subtitle/banner image, the previous site went with a traditional magazine-style <em>Contents</em> page system.
+			</li></ul>
+
+			<figure>
+				<video  controls
+				  poster="" >
+				  <source
+				    src="{{  site.baseurl }}/assets/img/zine/project/5--webm.webm"
+				    type="video/webm">
+				  <source
+				    src="{{  site.baseurl }}/assets/img/zine/project/5--mp4.mp4"
+				    type="video/mp4">
+				  Your browser doesn't support HTML5 video tag.
+				</video>
+				<figcaption>
+					The experience of scrolling through contents.
+				</figcaption>
+			</figure>
+
+			<ul>
+				<li>Also, the client also reported that the visual aesthetic of the site didn’t reflect the desired <em>editorial look and feel</em>, and looked a bit more &ldquo;playful&rdquo; and “chirpy” than needed.</li>
+			</ul>
+
+			<h2>4. Article Structure</h2>
+			<ul><li>There was no <strong>tags</strong> or <strong>categories</strong> system to index and sort articles by similar content.
+			</li><li>The client wanted to separate the normal articles with articles about the magazine itself, like the editorials. In the original site, there was a homogenous flavor to all the articles, and there was no way to visually or functionally separate article <em>for</em> the magazine and articles <em>about</em> the magazine.
+			</li><li>The client reported that the articles required some visuals or a banner image attached to them to give a visual context of the article.
+			</li><li>The client also demanded a share button to <em>facebook</em> and <em>twitter</em> as a means to share the articles quickly on social media networks.
+			</li></ul>
+			<h1>The Redesign</h1>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/6.png>
+				<figcaption>Splash of the redesigned homepage.</figcaption>
+			</figure>
+
+			<h2>1. Content Strategy and Information Architecture</h2>
+			<p>To combat the various problems the client and the readers experienced because of the traditional <em>quarterly, column-based</em> publication system, I decided to <em>completely revamp</em> how the magazine functioned. </p>
+
+			<ul><li><strong>From Columns to No-Columns</strong>: We decided to move from a column-based system (where every writer sticks with their own theme), to a more free-flowing blog/article system. This gave the writers the flexibility they demanded to flex their writing muscles in every direction—and since there were no set columns, overlapping of content themes was not only unproblematic, but also beneficial.
+			</li></ul>
+			<h2>2. Publication Schedule and Content Management System</h2>
+			<ul><li><strong>From Quarterly to Anytime</strong>: From a quarter-based publication schedule that only encouraged sporadic traffic, we developed a more regular and flexible publication (blog-style) schedule:
+			</li><li><strong>Staff Flexibility</strong>: In addition to encourage a more flexible and open writer-base, when writers wanted to leave, it hurt the magazine less—and as a result, the content stream remained fresh and diverse.
+			</li><li><strong>From Static to Siteleaf (and Jekyll)</strong>: From a partially hard-coded codebase, I moved the content and code to a automated content-management system. Instead of involving me in the update process, editors and writers could publish articles themselves easily. The back-end is now based on Jekyll (for increased portability and hosting-ease) and the build system was moved from (the deprecated) liquid-based <a href="http://mixture.io">Mixture</a> to <a href="http://gruntjs.com/">Grunt</a> .
+			</li></ul>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/7.png>
+				<figcaption>Hardcoded back-end of the old site.</figcaption>
+			</figure>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/8.png>
+				<figcaption>Editing content experience of the new site via a CMS (Siteleaf).</figcaption>
+			</figure>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/9.png>
+				<figcaption>Editing content experience of the new site via a CMS (Siteleaf).</figcaption>
+			</figure>
+
+			<h2>Layout and Aesthetics</h2>
+			<ul><li><strong>Content-centric Design</strong>: Rather than self-advertisement and calls-to-action being in the focus, it was a dire need for the website to accurately depict what was at its heart: <em>the articles</em> and the content.
+			</li><li>From having to access a flat list of articles, the readers could now browse through nugget-sized article modules and even browse by category.
+			</li><li>As pushed-for by the client and to match with the magazine’s tone, I went with a more subtle, less bright, and less colorful aesthetic. Here are some early prototypes and comps I made as drafts:
+			</li></ul>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/10.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/11.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/12.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/13.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/14.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/15.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/16.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/17.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/18.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/19.png>
+				<img src={{ site.baseurl }}/assets/img/zine/project/20.png>
+				<!-- <img src={{ site.baseurl }}/assets/img/zine/project/4.png> -->
+				<figcaption>Sketches and early wireframes of the redesign.</figcaption>
+			</figure>
+
+			<h2>4. Article Structure</h2>
+			<ul><li>I Introduced <strong>categories</strong> to mark the articles into the six streams of content the magazine published.
+			</li></ul>
+
+			<figure>
+				<img src={{ site.baseurl }}/assets/img/zine/project/21.png>
+				<figcaption>Cateogory structure for the new site.</figcaption>
+			</figure>
+
+			<ul><li>I Introduced a <strong>blog</strong> section to publish articles about announcing meet-ups, sharing progress, and in general publishing content <em>about</em> the magazine itself.
+			</li><li>Solving the problems listed earlier, a banner image to each article and social share buttons on the article pages were also added.
+
+<!--
+		<footer class="section--dual__masthead">
+
+			<div class="col col--1">
+				<a href="mailto:me@prabhavkhandelwal.com" class="">me@prabhavkhandelwal.com</a>
+			</div>
+
+
+		</footer> -->
+	</section>
+	<section class="section section--dual__beta">
+		<header class="section--dual__masthead">
+			<h1>
+				Hi, I'm Prabhav Khandelwal.
+				<a href="/" class="nav-toggle nav-toggle--more">home</a>
+			</h1>
+		</header>
+
+		<article>
+			<figure>
+				<img src="{{ site.baseurl }}/assets/img/zine/shot.png">
+			</figure>
+
+			<figure>
+				<img src="{{ site.baseurl }}/assets/img/zine/4board.png">
+			</figure>
+
+			<figure>
+				<img src="{{ site.baseurl }}/assets/img/zine/project/18.png">
+			</figure>
+
+			<figure>
+				<img src="{{ site.baseurl }}/assets/img/zine/shot2.png">
+			</figure>
+
+			<figure>
+				<img src="{{ site.baseurl }}/assets/img/zine/3board.png">
+			</figure>
+
+			<figure>
+				<img src="{{ site.baseurl }}/assets/img/zine/shot3.png">
+			</figure>
+
+		</article>
+
+<!-- 		<footer class="section--dual__masthead">
+
+			<div class="col col--1">
+				<a href="mailto:me@prabhavkhandelwal.com" class="">me@prabhavkhandelwal.com</a>
+			</div>
+
+
+		</footer> -->
+	</section>
+
+</section>
+
+
+{% include about__content.html %}
